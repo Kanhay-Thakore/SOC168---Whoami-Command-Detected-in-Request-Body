@@ -1,5 +1,5 @@
 # SOC168 - Whoami Command Detected in Request Body
-![Let's Defend SOC168](images/SOC_168)
+![Let's Defend SOC168](images/SOC_168.png)
 
 **Web Application Command Injection Investigation & Endpoint Containment | LetsDefend Platform**
 
@@ -179,8 +179,6 @@ The same commands injected via POST parameters — `whoami`, `ls`, `uname`, `cat
 ### Understanding Command Injection
 
 **What Is Command Injection?**
-![Planned test](images/Not_planned.png)
-![Network traffic](images/Network_traffic.png)
 Command injection is a critical web application vulnerability (OWASP Top 10 — A03: Injection) where an attacker inserts operating system commands into an input field that is passed directly to the server's shell without proper sanitization.
 
 ```
@@ -214,8 +212,10 @@ A 200 OK response does not just mean "request received" — in this context it m
 
 ---
 
-## 📋 Investigation Summary
+![Planned test](images/Not_planned.png)
+![Network traffic](images/Network_traffic.png)
 
+## 📋 Investigation Summary
 ### Attack Timeline
 ```
 Feb 28, 2022
