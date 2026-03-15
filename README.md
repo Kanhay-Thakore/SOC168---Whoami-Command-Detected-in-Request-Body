@@ -1,4 +1,5 @@
 # SOC168 - Whoami Command Detected in Request Body
+![Let's Defend SOC168](images/SOC_168)
 
 **Web Application Command Injection Investigation & Endpoint Containment | LetsDefend Platform**
 
@@ -98,10 +99,12 @@ Investigated a confirmed web application command injection attack against an int
 ---
 
 ### Phase 3: Log Analysis — Command Injection Evidence
-
-![Raw Log - POST Parameters](images/soc168_raw_logs_01.png)
-
 ![Log Management - 5 Entries](images/soc168_log_management_01.png)
+![Log Management - 5 Entries](images/soc168_log_management_02.png)
+![Log Management - 5 Entries](images/soc168_log_management_03.png)
+![Log Management - 5 Entries](images/soc168_log_management_04.png)
+![Log Management - 5 Entries](images/soc168_log_management_05.png)
+![Log Management - 5 Entries](images/soc168_log_management_06.png)
 
 **5 Malicious POST Requests Identified:**
 
@@ -130,6 +133,7 @@ Investigated a confirmed web application command injection attack against an int
 ![Endpoint Management - WebServer1004](images/soc168_endpoint_management_01.png)
 
 ![Terminal History - Command Evidence](images/soc168_terminal_history_01.png)
+![Terminal History - Command Evidence](images/soc168_terminal_history_02.png)
 
 **Compromised Endpoint Details:**
 
@@ -163,6 +167,8 @@ The same commands injected via POST parameters — `whoami`, `ls`, `uname`, `cat
 
 ✅ **Ticket Escalated to L2 Analyst** — Case handed off for deeper forensic investigation and full scope assessment
 
+![L2_Escalation](images/L2_Escalation.png)
+
 ✅ **Attack Classified as External & Unplanned** — Confirmed not a planned internal test; external malicious actor
 
 ---
@@ -172,7 +178,8 @@ The same commands injected via POST parameters — `whoami`, `ls`, `uname`, `cat
 ### Understanding Command Injection
 
 **What Is Command Injection?**
-
+![Planned test](images/Not_planned.png)
+![Network traffic](images/Network_traffic.png)
 Command injection is a critical web application vulnerability (OWASP Top 10 — A03: Injection) where an attacker inserts operating system commands into an input field that is passed directly to the server's shell without proper sanitization.
 
 ```
@@ -187,6 +194,7 @@ parameter=; cat /etc/shadow
 ```
 
 **Why This Succeeded:**
+![Attack_Successful](images/Attack_Successful.png)
 ```
 1. Web application accepts user input in POST body
 2. Input is NOT sanitized or validated server-side
@@ -225,7 +233,7 @@ XX:XX AM — WebServer1004 isolated via Endpoint Management
 XX:XX AM — Case escalated to L2 Analyst
 XX:XX AM — Case closed: True Positive — Active Command Injection Attack
 ```
-
+![Artifacts](images/Artifacts.png)
 ### Indicators of Compromise (IOCs)
 
 **Network Indicators:**
