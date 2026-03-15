@@ -192,8 +192,10 @@ parameter=; whoami
 parameter=; cat /etc/shadow
 ```
 
-**Why This Succeeded:**
 ![Attack_Successful](images/Attack_Successful.png)
+
+
+**Why This Succeeded:**
 ```
 1. Web application accepts user input in POST body
 2. Input is NOT sanitized or validated server-side
