@@ -160,6 +160,7 @@ The same commands injected via POST parameters — `whoami`, `ls`, `uname`, `cat
 ### Phase 5: Containment & Escalation
 
 ![Endpoint Containment](images/soc168_containment_01.png)
+![Endpoint Containment](images/soc168_containment_02.png)
 
 **Actions Taken:**
 
